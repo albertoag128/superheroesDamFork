@@ -2,8 +2,10 @@ package com.jmperezra.superheroes.presentation
 
 import android.content.SharedPreferences
 import com.jmperezra.app.commons.GsonJSerializer
+import com.jmperezra.app.commons.MoshiJSerializer
 import com.jmperezra.superheroes.data.SuperHeroesDataRepository
-import com.jmperezra.superheroes.data.local.SuperHeroesLocalSource
+import com.jmperezra.superheroes.data.local.SuperHeroesDataLocalSource
+import com.jmperezra.superheroes.data.local.SuperHeroesMockLocalSource
 import com.jmperezra.superheroes.domain.GetSuperHeroesFeedUseCase
 
 class SuperHeroesFactory {
@@ -13,7 +15,7 @@ class SuperHeroesFactory {
             return SuperHeroesViewModel(
                 GetSuperHeroesFeedUseCase(
                     SuperHeroesDataRepository(
-                        SuperHeroesLocalSource(sharedPreferences, GsonJSerializer())
+                        SuperHeroesDataLocalSource(sharedPreferences, MoshiJSerializer())
                     )
                 )
             )
