@@ -1,7 +1,7 @@
 package com.jmperezra.superheroes.data.local
 
 import android.content.SharedPreferences
-import com.jmperezra.commons.KSerializer
+import com.jmperezra.app.commons.KSerializer
 import com.jmperezra.superheroes.domain.SuperHeroe
 
 class SuperHeroesLocalSource(

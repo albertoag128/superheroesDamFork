@@ -1,4 +1,4 @@
-package com.jmperezra.commons
+package com.jmperezra.app.commons
 
 import com.google.gson.Gson
 import com.squareup.moshi.Moshi

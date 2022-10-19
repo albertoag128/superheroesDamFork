@@ -3,7 +3,7 @@ package com.jmperezra.superheroes.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.jmperezra.commons.MoshiJSerializer
+import com.jmperezra.app.commons.MoshiJSerializer
 import com.jmperezra.superheroes.R
 import com.jmperezra.superheroes.data.SuperHeroesDataRepository
 import com.jmperezra.superheroes.data.local.SuperHeroesLocalSource
