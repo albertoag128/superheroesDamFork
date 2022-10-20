@@ -15,7 +15,7 @@ class SuperHeroesFactory {
             return SuperHeroesViewModel(
                 GetSuperHeroesFeedUseCase(
                     SuperHeroesDataRepository(
-                        SuperHeroesDataLocalSource(sharedPreferences, MoshiJSerializer())
+                        SuperHeroesDataLocalSource(sharedPreferences, GsonJSerializer())
                     )
                 )
             )
