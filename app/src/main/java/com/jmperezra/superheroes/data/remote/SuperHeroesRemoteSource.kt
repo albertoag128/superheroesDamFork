@@ -4,11 +4,8 @@ import com.jmperezra.superheroes.domain.SuperHeroe
 
 class SuperHeroesRemoteSource(private val apiClient: ApiClient) {
 
-    fun getSuperHeroes(): List<SuperHeroe> {
-        val listApiModels = apiClient.getSuperHeroes()
-        return listApiModels.map { apiSuperHeroe ->
+    fun getSuperHeroes(): List<SuperHeroe> =
+        apiClient.getSuperHeroes().map { apiSuperHeroe ->
             apiSuperHeroe.toDomain()
         }
-    }
-
 }
