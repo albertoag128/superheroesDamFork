@@ -20,7 +20,12 @@ class SuperHeroesListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupView()
         loadSuperHeroes()
+    }
+
+    private fun setupView(){
+
     }
 
     private fun loadSuperHeroes() {
