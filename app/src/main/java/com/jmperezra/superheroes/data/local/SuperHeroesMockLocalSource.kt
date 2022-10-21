@@ -11,9 +11,9 @@ class SuperHeroesMockLocalSource : SuperHeroesLocalSource {
     override fun getAll(): List<SuperHeroe> {
         Thread.sleep(5000)
         return mutableListOf(
-            SuperHeroe(1, "SuperMan"),
-            SuperHeroe(2, "SpiderMan"),
-            SuperHeroe(3, "CatWoman")
+            SuperHeroe(1, "SuperMan", ""),
+            SuperHeroe(2, "SpiderMan", ""),
+            SuperHeroe(3, "CatWoman", "")
         )
     }
 

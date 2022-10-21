@@ -2,14 +2,13 @@ package com.jmperezra.superheroes.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
-import com.bumptech.glide.Glide
-import com.jmperezra.app.extensions.loadUrl
 import com.jmperezra.superheroes.R
+import com.jmperezra.superheroes.databinding.ActivitySuperheroesBinding
 import com.jmperezra.superheroes.domain.SuperHeroe
 
 class SuperHeroesListActivity : AppCompatActivity() {
+
+    private var binding: ActivitySuperheroesBinding? = null
 
     private val viewModel by lazy {
         SuperHeroesFactory.getViewModel(
@@ -19,13 +18,10 @@ class SuperHeroesListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setupView()
+        //setContentView(R.layout.activity_superheroes)
+        binding = ActivitySuperheroesBinding.inflate(layoutInflater)
+        setContentView(binding?.root)
         loadSuperHeroes()
-    }
-
-    private fun setupView(){
-
     }
 
     private fun loadSuperHeroes() {
@@ -37,8 +33,9 @@ class SuperHeroesListActivity : AppCompatActivity() {
     }
 
     private fun bind(superHeroes: List<SuperHeroe>) {
-        findViewById<TextView>(R.id.label_name).text = superHeroes.first().name
-        findViewById<ImageView>(R.id.imgSuperHeroe)
-            .loadUrl(superHeroes.first().imageUrl)
+        binding?.apply {
+            name.text = "asd"
+            realName.text = "asd"
+        }
     }
 }

@@ -25,3 +25,6 @@ Ejemplo:
         }
     }
 ```
+## ViewBinding
+
+Binding de las vistas...... bla blas

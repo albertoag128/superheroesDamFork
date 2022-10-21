@@ -10,7 +10,7 @@ import com.jmperezra.superheroes.presentation.SuperHeroesListActivity
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.actionOpenSuperHeroes).setOnClickListener {
             val intent = Intent(this, SuperHeroesListActivity::class.java)
             startActivity(intent)
