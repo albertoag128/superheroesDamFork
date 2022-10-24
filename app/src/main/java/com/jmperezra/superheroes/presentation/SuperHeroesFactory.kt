@@ -1,19 +1,22 @@
 package com.jmperezra.superheroes.presentation
 
+import android.content.Context
 import android.content.SharedPreferences
-import com.jmperezra.app.commons.GsonJSerializer
 import com.jmperezra.superheroes.data.SuperHeroesDataRepository
-import com.jmperezra.superheroes.data.local.SuperHeroesLocalDataSource
+import com.jmperezra.superheroes.data.local.db.SuperHeroeDbLocalDataSource
 import com.jmperezra.superheroes.domain.GetSuperHeroesFeedUseCase
 
 class SuperHeroesFactory {
 
     companion object {
-        fun getViewModel(sharedPreferences: SharedPreferences): SuperHeroesViewModel {
+        fun getViewModel(
+            context: Context,
+            sharedPreferences: SharedPreferences
+        ): SuperHeroesViewModel {
             return SuperHeroesViewModel(
                 GetSuperHeroesFeedUseCase(
                     SuperHeroesDataRepository(
-                        SuperHeroesLocalDataSource(sharedPreferences, GsonJSerializer())
+                        SuperHeroeDbLocalDataSource(context)
                     )
                 )
             )

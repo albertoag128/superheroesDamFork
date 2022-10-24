@@ -12,6 +12,7 @@ class SuperHeroesListActivity : AppCompatActivity() {
 
     private val viewModel by lazy {
         SuperHeroesFactory.getViewModel(
+            applicationContext,
             getSharedPreferences("nombre_shared_pref", MODE_PRIVATE)
         )
     }

@@ -2,7 +2,7 @@ package com.jmperezra.superheroes.data.local
 
 import com.jmperezra.superheroes.domain.SuperHeroe
 
-class SuperHeroesMockLocalSource : SuperHeroesLocalSource {
+class SuperHeroesMockLocalSource : SuperHeroesLocalDataSource {
 
     override fun save(superHeroes: List<SuperHeroe>) {
         TODO("Not yet implemented")
