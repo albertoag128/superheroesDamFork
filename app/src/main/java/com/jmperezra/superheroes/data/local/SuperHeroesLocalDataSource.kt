@@ -4,7 +4,7 @@ import android.content.SharedPreferences
 import com.jmperezra.app.commons.KSerializer
 import com.jmperezra.superheroes.domain.SuperHeroe
 
-class SuperHeroesDataLocalSource(
+class SuperHeroesLocalDataSource(
     private val sharedPreferences: SharedPreferences,
     private val jSerializer: KSerializer
 ) : SuperHeroesLocalSource {
@@ -16,17 +16,12 @@ class SuperHeroesDataLocalSource(
                     superHeroe.id.toString(),
                     jSerializer.toJson(superHeroe, SuperHeroe::class.java)
                 )
-                apply()
-            }
+            }.apply()
         }
     }
 
-    override fun getAll(): List<SuperHeroe> {
-        val superHeroesList = mutableListOf<SuperHeroe>()
-        sharedPreferences.all.forEach {
-            superHeroesList.add(jSerializer.fromJson(it.value as String, SuperHeroe::class.java))
-        }
-        return superHeroesList
+    override fun getAll(): List<SuperHeroe> = sharedPreferences.all.map {
+        jSerializer.fromJson(it.value as String, SuperHeroe::class.java)
     }
 
     override fun findById(superHeroeId: Int): SuperHeroe? {
