@@ -30,4 +30,8 @@ class SuperHeroesXmlLocalDataSource(
             jSerializer.fromJson(it, SuperHeroe::class.java)
         }
     }
+
+    override fun delete(superHeroeId: Int) {
+        sharedPreferences.edit().remove(superHeroeId.toString()).apply()
+    }
 }

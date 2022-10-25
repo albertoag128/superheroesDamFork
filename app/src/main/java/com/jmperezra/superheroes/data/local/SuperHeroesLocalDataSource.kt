@@ -6,4 +6,5 @@ interface SuperHeroesLocalDataSource {
     fun save(superHeroes: List<SuperHeroe>)
     fun getAll(): List<SuperHeroe>
     fun findById(superHeroeId: Int): SuperHeroe?
+    fun delete(superHeroeId: Int)
 }

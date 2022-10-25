@@ -1,6 +1,7 @@
 package com.jmperezra.superheroes.data.local.db
 
 import android.content.Context
+import androidx.room.Query
 import androidx.room.Room
 import com.jmperezra.app.data.AppDatabase
 import com.jmperezra.superheroes.data.local.SuperHeroesLocalDataSource
@@ -14,14 +15,24 @@ class SuperHeroeDbLocalDataSource(val applicationContext: Context) : SuperHeroes
     ).build()
 
     override fun save(superHeroes: List<SuperHeroe>) {
-        TODO("Not yet implemented")
+        val entities = superHeroes.map { superHeroe ->
+            superHeroe.toEntity()
+        }
+        db.superHeroeDao().save(*entities.toTypedArray())
     }
 
     override fun getAll() = db.superHeroeDao().getAll().map { superHeroeEntity ->
         superHeroeEntity.toDomain()
     }
 
+
     override fun findById(superHeroeId: Int): SuperHeroe? {
-        TODO("Not yet implemented")
+        return db.superHeroeDao().findById(superHeroeId)?.toDomain()
+    }
+
+    override fun delete(superHeroeId: Int) {
+        findById(superHeroeId)?.let { superHeroe ->
+            db.superHeroeDao().delete(superHeroe)
+        }
     }
 }
