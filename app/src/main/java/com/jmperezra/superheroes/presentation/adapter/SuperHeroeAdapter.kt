@@ -1,6 +1,7 @@
 package com.jmperezra.superheroes.presentation.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.jmperezra.superheroes.R
@@ -17,7 +18,7 @@ class SuperHeroeAdapter : RecyclerView.Adapter<SuperHeroeViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperHeroeViewHolder {
-        val view = LayoutInflater.from(parent.context)
+        val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_item_superheroe, parent, false)
         return SuperHeroeViewHolder(view)
     }
@@ -27,4 +28,5 @@ class SuperHeroeAdapter : RecyclerView.Adapter<SuperHeroeViewHolder>() {
     }
 
     override fun getItemCount(): Int = dataSet.size
+
 }

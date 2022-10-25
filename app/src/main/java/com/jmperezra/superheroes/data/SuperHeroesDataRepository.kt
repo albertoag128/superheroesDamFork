@@ -1,10 +1,10 @@
 package com.jmperezra.superheroes.data
 
-import com.jmperezra.superheroes.data.local.SuperHeroesLocalSource
+import com.jmperezra.superheroes.data.local.SuperHeroesLocalDataSource
 import com.jmperezra.superheroes.domain.SuperHeroe
 import com.jmperezra.superheroes.domain.SuperHeroesRepository
 
-class SuperHeroesDataRepository(private val localSource: SuperHeroesLocalSource) :
+class SuperHeroesDataRepository(private val localSource: SuperHeroesLocalDataSource) :
     SuperHeroesRepository {
 
     override fun saveSuperHeroes(superHeroes: List<SuperHeroe>) {
