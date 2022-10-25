@@ -14,6 +14,10 @@ class SuperHeroeDbLocalDataSource(val applicationContext: Context) : SuperHeroes
         AppDatabase::class.java, "db-superheroe"
     ).build()
 
+    init {
+        db.clearAllTables()
+    }
+
     override fun save(superHeroes: List<SuperHeroe>) {
         val entities = superHeroes.map { superHeroe ->
             superHeroe.toEntity()
@@ -32,7 +36,7 @@ class SuperHeroeDbLocalDataSource(val applicationContext: Context) : SuperHeroes
 
     override fun delete(superHeroeId: Int) {
         findById(superHeroeId)?.let { superHeroe ->
-            db.superHeroeDao().delete(superHeroe)
+            db.superHeroeDao().delete(superHeroe.toEntity())
         }
     }
 }

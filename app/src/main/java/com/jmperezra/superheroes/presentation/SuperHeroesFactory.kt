@@ -16,7 +16,7 @@ class SuperHeroesFactory {
             return SuperHeroesViewModel(
                 GetSuperHeroesFeedUseCase(
                     SuperHeroesDataRepository(
-                        SuperHeroesMockLocalSource()
+                        SuperHeroeDbLocalDataSource(context)
                     )
                 )
             )

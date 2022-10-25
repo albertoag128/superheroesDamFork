@@ -17,5 +17,5 @@ interface SuperHeroeDao {
     fun findById(superHeroeId: Int): SuperHeroeEntity?
 
     @Delete
-    fun delete(superHeroe: SuperHeroe)
+    fun delete(superHeroe: SuperHeroeEntity)
 }
