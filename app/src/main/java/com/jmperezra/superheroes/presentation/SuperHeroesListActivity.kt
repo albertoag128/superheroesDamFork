@@ -1,5 +1,7 @@
 package com.jmperezra.superheroes.presentation
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +31,7 @@ class SuperHeroesListActivity : AppCompatActivity() {
     private fun setupView() {
         binding = ActivitySuperheroesBinding.inflate(layoutInflater)
         setContentView(binding?.root)
+
         binding?.apply {
             listSuperheroes.adapter = superHeroeAdapter
             val verticalLayout = LinearLayoutManager(this@SuperHeroesListActivity)
