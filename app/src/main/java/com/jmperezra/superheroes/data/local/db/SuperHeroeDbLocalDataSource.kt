@@ -14,10 +14,6 @@ class SuperHeroeDbLocalDataSource(val applicationContext: Context) : SuperHeroes
         AppDatabase::class.java, "db-superheroe"
     ).build()
 
-    init {
-        db.clearAllTables()
-    }
-
     override fun save(superHeroes: List<SuperHeroe>) {
         val entities = superHeroes.map { superHeroe ->
             superHeroe.toEntity()
