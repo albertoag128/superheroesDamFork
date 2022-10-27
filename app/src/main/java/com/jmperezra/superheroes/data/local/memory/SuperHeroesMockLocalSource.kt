@@ -1,6 +1,7 @@
 package com.jmperezra.superheroes.data.local.memory
 
 import com.jmperezra.superheroes.data.local.SuperHeroesLocalDataSource
+import com.jmperezra.superheroes.domain.Biography
 import com.jmperezra.superheroes.domain.SuperHeroe
 
 class SuperHeroesMockLocalSource : SuperHeroesLocalDataSource {
@@ -14,92 +15,112 @@ class SuperHeroesMockLocalSource : SuperHeroesLocalDataSource {
             SuperHeroe(
                 1,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(1, "bio1", "ae1")
             ),
             SuperHeroe(
                 2,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(2, "bio2", "ae2")
             ),
             SuperHeroe(
                 3,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(3, "bio3", "ae3")
+
             ),
             SuperHeroe(
-                1,
+                4,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(4, "bio4", "ae4")
             ),
             SuperHeroe(
-                2,
+                5,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(5, "bio5", "ae5")
             ),
             SuperHeroe(
-                3,
+                6,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(6, "bio6", "ae6")
             ),
             SuperHeroe(
-                1,
+                7,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(7, "bio7", "ae7")
             ),
             SuperHeroe(
-                2,
+                8,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(8, "bio8", "ae8")
             ),
             SuperHeroe(
-                3,
+                9,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(9, "bio9", "ae9")
             ),
             SuperHeroe(
-                1,
+                10,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(10, "bio10", "ae10")
             ),
             SuperHeroe(
-                2,
+                11,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(11, "bio11", "ae11")
             ),
             SuperHeroe(
-                3,
+                12,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(12, "bio12", "ae12")
             ),
             SuperHeroe(
-                1,
+                13,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(13, "bio13", "ae13")
             ),
             SuperHeroe(
-                2,
+                14,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(14, "bio14", "ae14")
             ),
             SuperHeroe(
-                3,
+                15,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(15, "bio15", "ae15")
             ),
             SuperHeroe(
-                1,
+                16,
                 "SuperMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(16, "bio16", "ae16")
             ),
             SuperHeroe(
-                2,
+                17,
                 "SpiderMan",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(17, "bio17", "ae17")
             ),
             SuperHeroe(
-                3,
+                18,
                 "CatWoman",
-                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg"
+                "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/1-a-bomb.jpg",
+                Biography(18, "bio18", "ae18")
+
             )
         )
     }

@@ -18,4 +18,13 @@ interface SuperHeroeDao {
 
     @Delete
     fun delete(superHeroe: SuperHeroeEntity)
+
+    @Query(
+        "SELECT * FROM $SUPERHEROES_TABLA_NAME as sh " +
+                "JOIN $BIOGRAPHY_TABLA_NAME as bio ON sh.id = bio.id"
+    )
+    fun getSuperHeroeMapWithBiography(): Map<SuperHeroeEntity, BiographyEntity>
+
+    @Query("")
+    fun getSuperHeroe
 }
